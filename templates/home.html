@@ -1,0 +1,49 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Home" %}</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "bootstrap-icons/bootstrap-icons.css" %}">
+    
+</head>
+<body>
+{% get_current_language as l_code%}
+<header class = "header">
+        <div class = "container">
+            <div class="container">
+            	<a href="" class="logo">{% trans "Todo" %}</a>
+                <form action="{% url "set_language" %}" method = "post">
+                    {% csrf_token %}
+                    <select name="language" onclick="this.form.submit()">
+                        <option value="en" {% if l_code == "en" %}selected{% endif %}>{% trans "English" %}</option>
+                        <option value="fa" {% if l_code == "fa" %}selected{% endif %}>{% trans "Farsi" %}</option>
+                    </select>
+                </form>
+                <nav class="nav">
+                	<a href=""><i class="bi bi-house-fill"></i>{% trans "Home" %}</a>
+                    <a href=""><i class="bi bi-list-task"></i>{% trans "My Tasks" %}</a>
+                    <a href=""><i class="bi bi-plus-circle"></i>{% trans "Create Task" %}</a>
+                </nav>
+            </div>
+        </div>   
+</header>
+
+<main>
+    <div class="container">
+        <section class="feature">
+            <div class="feature-content">
+                <h1>{% trans "Todo" %}</h1>
+                <p>{% trans "Todo helps you more focus, either work or play." %}</p>	
+                <a class="btn btn-primary cta" href="">{% trans "Get Started" %}</a>
+            </div>
+            <img src="{%static 'images/feature.jpg'%}" alt="" class="feature-image">
+        </section>
+    </div>
+</main>
+
+</body>
+</html>
