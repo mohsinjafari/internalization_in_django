@@ -44,11 +44,12 @@ The project includes:
    ```bash
    git clone https://github.com/your-username/your-repo.git
 2. Install dependencies (if the backend is included)
+
 pip install -r requirements.txt
 
-3. Run your server
-python manage.py runserver
+4. Run your server
 
+python manage.py runserver
 
 By default, this will start the server at:
 
@@ -59,4 +60,5 @@ http://localhost:8000/
 Open your browser and go to:
 
 http://localhost:8000/
+
 Switch between English and Persian using the language control
