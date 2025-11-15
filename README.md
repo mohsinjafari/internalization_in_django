@@ -43,16 +43,20 @@ The project includes:
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/your-repo.git
-Install dependencies (if backend is included).
+2. Install dependencies (if the backend is included)
+pip install -r requirements.txt
 
-Run your server:
-
-bash
-Copy code
+3. Run your server
 python manage.py runserver
-Open:
 
-arduino
-Copy code
+
+By default, this will start the server at:
+
+http://localhost:8000/
+
+4. Access the app
+
+Open your browser and go to:
+
 http://localhost:8000/
 Switch between English and Persian using the language control
